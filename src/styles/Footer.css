@@ -1,42 +1,38 @@
-/* Footer.css */
+/* Footer styles */
 footer {
-    background-color: #222;  /* Dark background color */
-    color: white;  /* White text */
-    padding: 20px 0;  /* Padding on top and bottom */
-    text-align: center;  /* Center align text */
-    font-size: 14px;  /* Font size */
-    position: relative;  /* To position child elements */
-    bottom: 0;  /* Keep the footer at the bottom */
-    width: 100%;  /* Ensure it spans the whole width */
-}
-
-footer p {
-    margin: 0;  /* Remove any default margin */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #333; /* Dark background color */
+    color: white; /* Text color */
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
 
 footer ul {
-    list-style: none;  /* Remove bullet points from list */
+    list-style: none;
     padding: 0;
-    display: flex;  /* Align list items horizontally */
-    justify-content: center;  /* Center the list items */
-    gap: 20px;  /* Space between the items */
-    margin-top: 10px;  /* Some margin from the paragraph */
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between links */
 }
 
 footer ul li {
-    display: inline;  /* Ensure the list items are inline */
+    display: inline;
 }
 
 footer ul li a {
-    text-decoration: none;  /* Remove the underline from links */
-    color: white;  /* White text color */
-    font-size: 16px;  /* Font size for the links */
-    transition: color 0.3s ease;  /* Smooth color transition */
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
 }
 
 footer ul li a:hover {
-    color: #00aced;  /* Change color on hover */
+    text-decoration: underline;
 }
+
 
 @media (max-width: 768px) {
     footer ul {

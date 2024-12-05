@@ -13,7 +13,7 @@ function App() {
         <Navbar />  {/* Display the Navbar */}
         <Routes>  {/* Define the Routes */}
           <Route path="/" element={<Home />} />  {/* Define route for Home */}
-          <Route path="/about" element={<About />} />  {/* Define route for About */}
+          <Route path="/About" element={<About />} />  {/* Define route for About */}
           <Route path="/contact" element={<Contact />} />  {/* Define route for Contact */}
         </Routes>
         <Footer />  {/* Display the Footer */}
