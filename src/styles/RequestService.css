@@ -1,0 +1,105 @@
+/* Request Service Page */
+.request-service-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb); /* Soft Gradient */
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Form Container */
+.form-container {
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-title {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-description {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* Form Fields */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #a18cd1;
+}
+
+/* Service Details Link */
+.service-details {
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.view-details {
+    color: #a18cd1;
+    text-decoration: none;
+}
+
+.view-details:hover {
+    text-decoration: underline;
+}
+
+/* Submit Button */
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+    background: linear-gradient(90deg, #f39c12, #ff6f61);
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-submit:hover {
+    background: linear-gradient(90deg, #ff6f61, #f39c12);
+}
+
+.btn-submit:active {
+    transform: scale(0.98); /* Press effect */
+}

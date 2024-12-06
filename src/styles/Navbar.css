@@ -1,33 +1,65 @@
-/* Navbar.css */
+/* Navbar styling */
+body {
+    margin: 0; /* Remove any default margin */
+    padding-top: 70px; /* Prevent content from being covered by navbar */
+}
+
+
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #333;
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb); /* Gradient background */
     color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 70px; /* Increased height to avoid cropping */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Ensure padding doesn't affect overall size */
 }
 
+/* Logo styling */
 nav .logo {
     font-size: 24px;
     font-weight: bold;
+    line-height: 70px; /* Vertically center the logo */
 }
 
+/* Navigation links */
 nav ul {
     list-style: none;
     display: flex;
     gap: 15px;
     margin: 0;
     padding: 0;
+    height: 100%; /* Ensure the list takes up full height of navbar */
+    align-items: center; /* Vertically center the links */
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
+    font-weight: normal;
     transition: color 0.3s ease;
+    line-height: 70px; /* Vertically align the text */
 }
 
 nav ul li a:hover {
-    color: #00aced; /* Highlight on hover */
+    color: #00aced;
+}
+
+/* Style when scrolling */
+nav.scrolled {
+    background: linear-gradient(135deg, #a18cd1, #fbc2eb); /* Gradient background stays on scroll */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+/* Ensure content doesn't overlap the navbar */
+body {
+    padding-top: 80px; /* Added padding to prevent overlap with navbar */
 }

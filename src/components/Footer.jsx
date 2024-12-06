@@ -1,16 +1,46 @@
 import React from "react";
-import "../styles/Footer.css";  // Importing the CSS file from the 'styles' directory
+import "../styles/Footer.css";
+import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
 
 function Footer() {
     return (
         <footer>
-            
-            <ul>
-                <li><a href="#">Facebook</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Instagram</a></li>
-            </ul>
-            <p> {new Date().getFullYear()} BekiTech . All rights reserved.</p>
+            <div className="footer-container">
+                <div className="footer-logo">
+                    <img src="/images/logo.jpeg" alt="Your Logo" />
+                </div>
+                <div className="footer-about">
+                    <h3>I'm Bereket Gebeyeyaw</h3>
+                    <p>Creating innovative solutions with passion and creativity.</p>
+                </div>
+                <div className="footer-links">
+                    <ul>
+                        <li>
+                            <a href="https://www.linkedin.com/in/bereket-g-a8b728234/" target="_blank" rel="noopener noreferrer">
+                                <FaLinkedin />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Bereketgebeyaw" target="_blank" rel="noopener noreferrer">
+                                <FaGithub />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:gebeyawbereket8@gmail.com.com">
+                                <FaEnvelope />
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                                <FaInstagram />
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div className="footer-bottom">
+                <p>&copy; {new Date().getFullYear()} Bereket . All rights reserved.</p>
+            </div>
         </footer>
     );
 }
