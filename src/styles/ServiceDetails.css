@@ -1,87 +1,103 @@
-/* ServiceDetails.css */
-
 .service-details {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 900px; /* Fixed width for consistency */
+  margin: 50px auto; /* Center the container */
+  padding: 80px 40px; /* Increased padding for more height */
+  background: linear-gradient(135deg, #fdfbfb, #ebedee); /* Subtle gradient background */
+  border-radius: 20px; /* Smooth rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Elegant shadow for depth */
+  overflow: hidden; /* Ensure content stays inside rounded corners */
+  animation: fadeIn 1s ease-in-out; /* Smooth fade-in effect */
+  min-height: 500px; /* Set a minimum height to ensure container stays tall */
+}
+
+.service-details h1 {
+  font-size: 3rem; /* Larger font for emphasis */
+  color: #34495e; /* Sophisticated dark blue-gray */
+  text-align: center; /* Center-align title */
+  text-transform: uppercase; /* Make title standout */
+  letter-spacing: 2px; /* Add spacing between letters */
+  margin-bottom: 30px; /* Added space for better vertical spacing */
+  position: relative;
+}
+
+.service-details h1::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #3498db; /* Blue accent */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.service-details p {
+  font-size: 1.3rem; /* Make text more readable */
+  color: #7f8c8d; /* Neutral color for paragraph */
+  line-height: 1.8; /* Improved readability */
+  margin-bottom: 30px;
+  text-align: justify; /* Align text for a clean look */
+}
+
+.service-details div {
+  font-size: 1.1rem;
+  color: #2c3e50; /* Darker for focus */
+  background: #f8f9fa; /* Subtle contrasting background */
+  padding: 20px 25px;
+  border-left: 4px solid #3498db; /* Accent border */
+  border-radius: 10px;
+  margin-top: 40px; /* Increased margin for better spacing */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.service-details .view-more {
+  display: inline-block;
+  padding: 15px 25px;
+  background: #3498db; /* Bold CTA color */
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 50px; /* Rounded button */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 40px; /* Added space between button and description */
+}
+
+.service-details .view-more:hover {
+  background: #2980b9; /* Darker hover state */
+  transform: translateY(-3px); /* Subtle hover lift */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
-  
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-details {
+    padding: 60px 20px; /* Adjust for smaller screens */
+    min-height: 600px; /* Increase height for smaller screens */
+  }
+
   .service-details h1 {
     font-size: 2.5rem;
-    color: #2c3e50;
-    margin-bottom: 15px;
   }
-  
+
   .service-details p {
-    font-size: 1.2rem;
-    color: #7f8c8d;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-size: 1.1rem;
   }
-  
+
   .service-details div {
     font-size: 1rem;
-    color: #34495e;
-    background-color: #ecf0f1;
-    padding: 15px;
-    border-radius: 6px;
-    margin-top: 20px;
+    padding: 15px 20px;
   }
-  
-  .service-details .service-header {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .service-details .service-header h1 {
-    font-size: 3rem;
-    color: #2c3e50;
-  }
-  
-  .service-details .service-header p {
-    font-size: 1.2rem;
-    color: #7f8c8d;
-  }
-  
-  .view-more {
-    padding: 12px 20px;
-    background-color: #3498db;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .view-more:hover {
-    background-color: #2980b9;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .service-details {
-      margin: 20px;
-      padding: 15px;
-    }
-  
-    .service-details h1 {
-      font-size: 2rem;
-    }
-  
-    .service-details p {
-      font-size: 1rem;
-    }
-  
-    .service-details div {
-      font-size: 0.9rem;
-    }
-  
-    .view-more {
-      padding: 10px 15px;
-    }
-  }
-  
+}

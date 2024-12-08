@@ -1,13 +1,14 @@
 import React from "react";
 import "../styles/Footer.css";
 import { FaLinkedin, FaGithub, FaEnvelope, FaInstagram } from "react-icons/fa";
+import logopic from"../assets/logo.png"
 
 function Footer() {
     return (
         <footer>
             <div className="footer-container">
                 <div className="footer-logo">
-                    <img src="/images/logo.jpeg" alt="Your Logo" />
+                    <img src={logopic} alt="Your Logo" />
                 </div>
                 <div className="footer-about">
                     <h3>I'm Bereket Gebeyeyaw</h3>
@@ -26,7 +27,7 @@ function Footer() {
                             </a>
                         </li>
                         <li>
-                            <a href="mailto:gebeyawbereket8@gmail.com.com">
+                            <a href="mailto:gebeyawbereket8@gmail.com">
                                 <FaEnvelope />
                             </a>
                         </li>
@@ -39,7 +40,7 @@ function Footer() {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} Bereket . All rights reserved.</p>
+                <p>&copy; {new Date().getFullYear()} Bereket. All rights reserved.</p>
             </div>
         </footer>
     );

@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles/Portfolio.css";
 
-// Import images
 import eLearning from "../assets/elearning.png";
 import realEstate from "../assets/realestate.png";
 import transportation from "../assets/transportation.png";
@@ -21,7 +20,7 @@ const projects = [
 function Portfolio() {
   return (
     <div className="portfolio-container">
-      <h1>Our Portfolio</h1>
+      <h1>My Portfolio</h1>
       <div className="portfolio-grid">
         {projects.map((project) => (
           <div key={project.id} className="portfolio-card">
@@ -34,7 +33,7 @@ function Portfolio() {
       </div>
      
       
-      <a href="/contact" className="contact-button">Contact</a>
+      <a href="/contact" className="contact-button">Contact Me</a>
     </div>
   );
 }

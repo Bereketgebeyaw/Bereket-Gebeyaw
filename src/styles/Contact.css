@@ -37,6 +37,27 @@
     border-radius: 4px;
     cursor: pointer;
   }
+  .btn-conatact {
+    background: linear-gradient(90deg, #f39c12, #ff6f61);
+    color: white;
+    padding: 12px 15px; /* Shortened padding */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: auto; /* Ensures button width adjusts based on content */
+    max-width: 150px; /* Optional: Limit the max width of the button */
+    display: block; /* Makes the button a block-level element */
+    margin: 0 auto; /* Centers the button horizontally */
+}
+
+/* If you want to center the button vertically as well, apply this to the container */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    height: 100vh; /* Full viewport height for vertical centering */
+}
+
   
   
   

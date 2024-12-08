@@ -23,11 +23,21 @@ nav {
 }
 
 /* Logo styling */
-nav .logo {
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 70px; /* Vertically center the logo */
-}
+.logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo-image {
+    width: 50px;
+    height: 50px;
+    object-fit: contain; /* Ensures the image fits nicely */
+    transition: transform 0.3s ease;
+  }
+  
+  .logo-image:hover {
+    transform: scale(1.1); /* Slight zoom on hover */
+  }
 
 /* Navigation links */
 nav ul {

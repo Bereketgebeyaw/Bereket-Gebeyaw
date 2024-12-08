@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Navbar.css";
+import logopic from"../assets/logo.png"
 
 function Navbar() {
   useEffect(() => {
@@ -22,7 +23,9 @@ function Navbar() {
 
   return (
     <nav>
-      <div className="logo">BekiTech</div>
+      <div className="logo">
+    <img src={logopic} alt="BekiTech Logo" className="logo-image" />
+  </div>
       <ul>
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About</Link></li>
