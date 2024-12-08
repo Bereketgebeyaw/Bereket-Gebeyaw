@@ -32,7 +32,7 @@ function Footer() {
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                            <a href="https://www.instagram.com/https://www.instagram.com/bereket_gebeyaw/" target="_blank" rel="noopener noreferrer">
                                 <FaInstagram />
                             </a>
                         </li>
