@@ -6,7 +6,7 @@ function Services() {
   return (
     <div className="services-container">
       <div className="services-header">
-        <h1>Our Services</h1>
+        <h1>Services</h1>
         <p>I offer a variety of services tailored to your business needs</p>
       </div>
       <div className="services-list">
