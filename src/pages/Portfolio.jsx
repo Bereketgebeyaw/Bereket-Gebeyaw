@@ -33,7 +33,7 @@ function Portfolio() {
       </div>
      
       
-      <a href="/Contact" className="contact-button">Contact Me</a>
+      
     </div>
   );
 }

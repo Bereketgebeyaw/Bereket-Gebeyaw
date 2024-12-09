@@ -47,7 +47,7 @@ function Home() {
                         <p>I streamline workflows and enhance productivity by automating repetitive tasks. My automation solutions are designed to save time, reduce errors, and optimize efficiency, tailored to meet your goals.</p>
                     </div>
                 </div>
-                <a href="/Services" className="explore-more">Explore More Services</a>
+               
             </section>
 
         </div>
