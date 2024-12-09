@@ -12,6 +12,9 @@ function Home() {
         setClicked(true);
         navigate("/RequestService");
     };
+    const handleExploreMore = () => {
+        navigate('/services'); 
+      };
     
 
     return (
@@ -47,7 +50,9 @@ function Home() {
                         <p>I streamline workflows and enhance productivity by automating repetitive tasks. My automation solutions are designed to save time, reduce errors, and optimize efficiency, tailored to meet your goals.</p>
                     </div>
                 </div>
-               
+                <button className="explore-more" onClick={handleExploreMore}>
+        Explore More Services
+      </button>
             </section>
 
         </div>

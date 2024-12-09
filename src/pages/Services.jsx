@@ -22,7 +22,7 @@ function Services() {
         
         <div className="service-card-item">
           <h2>Startup Services</h2>
-          <p>Kickstart your business with our expert guidance and tools.</p>
+          <p>Kickstart your business with my expert guidance and tools.</p>
           <Link to="/service-details/startup-services">
             <button className="view-more">View More</button>
           </Link>
@@ -31,7 +31,7 @@ function Services() {
        
         <div className="service-card-item">
           <h2>Custom Web Development</h2>
-          <p>We build scalable, secure, and fast websites tailored to your needs.</p>
+          <p>I build scalable, secure, and fast websites tailored to your needs.</p>
           <Link to="/service-details/custom-web-development">
             <button className="view-more">View More</button>
           </Link>
