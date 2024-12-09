@@ -91,7 +91,7 @@ function RequestService() {
                         </select>
                     </div>
 
-                    <p className="service-details">
+                    <p className="about-function">
                         Want to learn more about our services? 
                         <a href="/services" className="view-details">View Service Details</a>
                     </p>
