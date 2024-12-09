@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     background: linear-gradient(135deg, #a18cd1, #fbc2eb); /* Soft Gradient */
-    height: 100vh;
+    
     padding: 20px;
     box-sizing: border-box;
 }
@@ -14,10 +14,15 @@
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced Shadow */
     padding: 40px;
+    margin-bottom: 100px;
+    margin-top: 80px;
     width: 100%;
     max-width: 500px;
     box-sizing: border-box; /* Prevents overflow due to padding */
+    height: auto; /* Allows content to define the height */
+    min-height: 400px; /* Ensures the form doesn't collapse too much */
 }
+
 
 /* Form Title */
 .form-title {

@@ -35,18 +35,19 @@ function Home() {
                 <div className="services-container">
                     <div className="service-card">
                         <h3>Website Development</h3>
-                        <p>We create responsive, user-friendly websites that drive business growth. Our designs are tailored to meet your needs, ensuring an outstanding user experience.</p>
+                        <p>I design and develop responsive, user-friendly websites that showcase creativity and functionality. With a focus on detail, I ensure each project reflects the unique vision and needs of my clients.</p>
                     </div>
                     <div className="service-card">
                         <h3>Mobile Application Development</h3>
-                        <p>Our mobile app development services offer custom solutions for Android and iOS, providing seamless and engaging experiences for your customers.</p>
+                        <p>Specializing in custom mobile app solutions, I create seamless experiences for both Android and iOS platforms. My apps are built to deliver exceptional usability and meet the demands of modern users.</p>
+
                     </div>
                     <div className="service-card">
                         <h3>Automation Services</h3>
-                        <p>Automate your business processes with our efficient automation services. We provide solutions that save time and reduce errors, enhancing productivity.</p>
+                        <p>I streamline workflows and enhance productivity by automating repetitive tasks. My automation solutions are designed to save time, reduce errors, and optimize efficiency, tailored to meet your goals.</p>
                     </div>
                 </div>
-                <a href="/services" className="explore-more">Explore More Services</a>
+                <a href="/Services" className="explore-more">Explore More Services</a>
             </section>
 
         </div>
