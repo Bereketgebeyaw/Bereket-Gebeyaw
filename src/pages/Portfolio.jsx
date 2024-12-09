@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/Portfolio.css";
+import { useNavigate } from "react-router-dom"; 
 
 import eLearning from "../assets/elearning.png";
 import realEstate from "../assets/realestate.png";
@@ -18,6 +19,11 @@ const projects = [
 ];
 
 function Portfolio() {
+  const navigate = useNavigate();
+
+  const handlecontact = () => {
+    navigate('/contact'); 
+  };
   return (
     <div className="portfolio-container">
       <h1>My Portfolio</h1>
@@ -34,6 +40,9 @@ function Portfolio() {
      
       
       
+      <button className="contact-button" onClick={handlecontact}>
+        Explore More Services
+      </button>
     </div>
   );
 }
