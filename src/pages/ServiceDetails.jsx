@@ -1,6 +1,7 @@
 import React from "react";
-import { useParams } from "react-router-dom"; 
+import { useParams, useNavigate } from "react-router-dom";
 import "../styles/ServiceDetails.css"; 
+
 
 const serviceDetails = {
   "social-media-management": {
@@ -44,15 +45,20 @@ const serviceDetails = {
 
 
 function ServiceDetails() {
-  const { serviceId } = useParams(); // Get the serviceId from the URL
-  const service = serviceDetails[serviceId]; // Find the service from the data
+  const { serviceId } = useParams(); 
+  const service = serviceDetails[serviceId]; 
+  const navigate = useNavigate();
 
   if (!service) {
-    return <div>Service not found!</div>; // Handle case where the service doesn't exist
+    return <div>Service not found!</div>; 
   }
 
   return (
     <div className="service-details">
+     
+      <button className="back-button" onClick={() => navigate(-1)}>
+        &larr; Back
+      </button>
       <h1>{service.title}</h1>
       <p>{service.description}</p>
       <div>{service.additionalInfo}</div>

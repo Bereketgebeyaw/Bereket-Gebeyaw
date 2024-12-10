@@ -9,14 +9,12 @@ const AboutPage = () => {
       <section className="general-description">
         <h1>About Me</h1>
         <p>
-         I'm Bereket Gebeyaw, a passionate and driven individual dedicated to crafting impactful solutions in the tech world. With a strong focus on quality, efficiency, and innovation, I aim to bridge the gap between challenges and opportunities through technology.
-        </p>
-        <p>
-          Our team of experts is passionate about delivering cutting-edge 
-          solutions tailored to the unique needs of our clients. From software 
-          development to tech consulting, BekiTech is your trusted partner in 
-          navigating the digital landscape.
-        </p>
+  I'm Bereket Gebeyaw, a passionate and driven individual dedicated to crafting impactful solutions in the tech world. With a strong focus on quality, efficiency, and innovation, I aim to bridge the gap between challenges and opportunities through technology.
+</p>
+<p>
+  I am committed to pushing the boundaries of what’s possible, constantly learning and adapting to new technologies. My goal is to create meaningful and effective solutions that solve real-world problems and drive progress in the tech industry.
+</p>
+
       </section>
 
       {/* Mission, Vision, and Values Section */}

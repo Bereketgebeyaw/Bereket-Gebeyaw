@@ -69,6 +69,33 @@
   transform: translateY(-3px); /* Subtle hover lift */
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
 }
+.back-button {
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #a18cd1; /* Lavender color */
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  color: #8a74b8; /* Slightly darker lavender */
+}
+
+.back-button:focus {
+  outline: none;
+}
+
+.back-button &::before {
+  content: "← "; /* Adding the left arrow symbol */
+  font-size: 20px;
+  margin-right: 8px;
+}
+
+
+
 
 @keyframes fadeIn {
   from {
