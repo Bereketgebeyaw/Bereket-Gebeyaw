@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
-import logopic from"../assets/logo.png"
+import logopic from "../assets/logo.png";
 
 function Navbar() {
   useEffect(() => {
@@ -24,14 +24,44 @@ function Navbar() {
   return (
     <nav>
       <div className="logo">
-    <img src={logopic} alt="BekiTech Logo" className="logo-image" />
-  </div>
+        <img src={logopic} alt="BekiTech Logo" className="logo-image" />
+      </div>
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/services">Services</Link></li>
-        <li><Link to="/portfolio">Portfolio</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+        <li>
+          <NavLink 
+            to="/" 
+            className={({ isActive }) => (isActive ? "active-link" : "")}>
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/about" 
+            className={({ isActive }) => (isActive ? "active-link" : "")}>
+            About
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/services" 
+            className={({ isActive }) => (isActive ? "active-link" : "")}>
+            Services
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/portfolio" 
+            className={({ isActive }) => (isActive ? "active-link" : "")}>
+            Portfolio
+          </NavLink>
+        </li>
+        <li>
+          <NavLink 
+            to="/contact" 
+            className={({ isActive }) => (isActive ? "active-link" : "")}>
+            Contact
+          </NavLink>
+        </li>
       </ul>
     </nav>
   );

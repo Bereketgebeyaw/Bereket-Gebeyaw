@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "../styles/RequestService.css";  
+import "../styles/RequestService.css";
+import axios from "axios";
 
 function RequestService() {
     const [formData, setFormData] = useState({
@@ -20,24 +21,27 @@ function RequestService() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        try {
-            const response = await fetch('RequestService', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
+        const { name, email, serviceType, details } = formData;
 
-            const result = await response.json();
-            if (response.ok) {
-                alert("Your request has been submitted!");
+        // Validate form fields
+        if (!name || !email || !serviceType || !details) {
+            alert("Please fill in all fields to continue.");
+            return;
+        }
+
+        try {
+            // Make the POST request to the backend
+            const response = await axios.post("http://localhost:2000/send_email", formData);
+
+            if (response.status === 200) {
+                alert("Your request has been submitted successfully!");
                 setFormData({ name: "", email: "", serviceType: "", details: "" });
             } else {
-                alert("Error submitting request: " + result.message);
+                alert("An error occurred while submitting your request.");
             }
         } catch (error) {
-            alert("Error submitting request: " + error.message);
+            console.error("Error submitting request:", error);
+            alert("An error occurred. Please try again.");
         }
     };
 
@@ -56,7 +60,6 @@ function RequestService() {
                             id="name"
                             name="name"
                             placeholder="Enter your full name"
-                            required
                             value={formData.name}
                             onChange={handleChange}
                         />
@@ -69,32 +72,26 @@ function RequestService() {
                             id="email"
                             name="email"
                             placeholder="Enter your email address"
-                            required
                             value={formData.email}
                             onChange={handleChange}
                         />
                     </div>
+
                     <div className="form-group">
                         <label htmlFor="service-type">Service Type:</label>
-                        <select 
-                            id="service-type" 
-                            name="serviceType" 
-                            required
+                        <select
+                            id="service-type"
+                            name="serviceType"
                             value={formData.serviceType}
                             onChange={handleChange}
                         >
                             <option value="" disabled>Select a service</option>
                             <option value="management-consultancy">Management Consultancy</option>
-                            <option value="social media managment">Social Media Management</option>
+                            <option value="social-media-management">Social Media Management</option>
                             <option value="automation-services">Automation Services</option>
                             <option value="training">Training</option>
                         </select>
                     </div>
-
-                    <p className="about-function">
-                        Want to learn more about our services? 
-                        <a href="/services" className="view-details">View Service Details</a>
-                    </p>
 
                     <div className="form-group">
                         <label htmlFor="details">Additional Details:</label>

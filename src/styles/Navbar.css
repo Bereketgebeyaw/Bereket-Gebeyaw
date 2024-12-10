@@ -52,12 +52,15 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
-    color: white;
-    font-size: 18px;
-    font-weight: normal;
+    color: black; /* Default link color */
     transition: color 0.3s ease;
-    line-height: 70px; /* Vertically align the text */
-}
+  }
+
+  .active-link {
+    color: blue; /* Change this to your desired active color */
+    font-weight: bold;
+    border-bottom: 2px solid blue; /* Optional underline effect */
+  }
 
 nav ul li a:hover {
     color: #00aced;

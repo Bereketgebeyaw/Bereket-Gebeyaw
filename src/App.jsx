@@ -10,6 +10,7 @@ import Services from './pages/Services';
 import ServiceDetails from './pages/ServiceDetails';
 import Portfolio from './pages/Portfolio';
 
+
 function App() {
   return (
     <Router>  {/* Wrap the entire app in Router */}
@@ -23,6 +24,7 @@ function App() {
           <Route path="/Services" element={<Services />} />
           <Route path="/service-details/:serviceId" element={<ServiceDetails />} />
           <Route path="/portfolio" element={<Portfolio />} />
+          
 
         </Routes>
         <Footer />  {/* Display the Footer */}
