@@ -24,8 +24,6 @@ function App() {
           <Route path="/Services" element={<Services />} />
           <Route path="/service-details/:serviceId" element={<ServiceDetails />} />
           <Route path="/portfolio" element={<Portfolio />} />
-          
-
         </Routes>
         <Footer />  {/* Display the Footer */}
       </div>

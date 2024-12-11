@@ -1,81 +1,48 @@
-import express from "express";
-import cors from "cors";
 import nodemailer from "nodemailer";
+import dotenv from "dotenv";
 
-const app = express();
-const PORT = 2000;
+dotenv.config(); // Load environment variables
 
-// Middleware
-app.use(cors());
-app.use(express.json({ limit: "50mb" }));
-app.use(express.urlencoded({ limit: "50mb", extended: true }));
+export default async function handler(req, res) {
+    if (req.method !== "POST") {
+        return res.status(405).json({ message: "Only POST requests are allowed" });
+    }
 
-// Nodemailer function
-const sendEmail = ({ recipient_email, subject, message }) => {
-    return new Promise((resolve, reject) => {
-        const transporter = nodemailer.createTransport({
-            service: "gmail",
-            auth: {
-                user: "gebeyawbereket8@gmail.com", // Replace with your email
-                pass: "bzajnsdvjgnzcxyu", // Replace with your app-specific password
-            },
-        });
-
-        const mailOptions = {
-            from: "gebeyawbereket8@gmail.com", // Sender email
-            to: recipient_email, // Recipient email
-            subject,
-            text: message,
-        };
-
-        transporter.sendMail(mailOptions, (error, info) => {
-            if (error) {
-                console.error("Error sending email:", error);
-                return reject({ message: "Failed to send email." });
-            }
-            return resolve({ message: "Email sent successfully!" });
-        });
-    });
-};
-
-// API routes
-app.post("/send_email", async (req, res) => {
     const { name, email, serviceType, details } = req.body;
 
-    // Log incoming request data for debugging
-    console.log("Received data:", req.body);
+    console.log("Received data:", req.body); // Debugging incoming request
 
-    // Validate request body
     if (!name || !email || !serviceType || !details) {
         return res.status(400).send({ message: "All fields are required." });
     }
 
-    try {
-        const subject = `New Service Request: ${serviceType}`;
-        const message = `
+    const transporter = nodemailer.createTransport({
+        service: "gmail",
+        auth: {
+            user: process.env.EMAIL_USER,
+            pass: process.env.EMAIL_PASS,
+        },
+    });
+
+    const mailOptions = {
+        from: process.env.EMAIL_USER, // Sender email
+        to: process.env.RECIPIENT_EMAIL, // Recipient email
+        subject: `New Service Request: ${serviceType}`,
+        text: `
             You have a new service request:
             ---------------------------------
             Name: ${name}
             Email: ${email}
             Service Type: ${serviceType}
             Details: ${details}
-        `;
+        `,
+    };
 
-        // Sending email
-        await sendEmail({
-            recipient_email: "gebeyawbereket8@gmail.com", // Replace with your recipient email
-            subject,
-            message,
-        });
-
-        res.status(200).send({ message: "Email sent successfully!" });
+    try {
+        await transporter.sendMail(mailOptions);
+        res.status(200).json({ message: "Email sent successfully!" });
     } catch (error) {
-        console.error("Error in /send_email:", error);
-        res.status(500).send({ message: "Error sending email." });
+        console.error("Error sending email:", error);
+        res.status(500).json({ message: "Failed to send email." });
     }
-});
-
-// Server
-app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
-});
+}
