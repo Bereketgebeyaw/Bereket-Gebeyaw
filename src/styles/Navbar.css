@@ -1,78 +1,46 @@
-/* Navbar styling */
-body {
-    margin: 0; /* Remove any default margin */
-    padding-top: 70px; /* Prevent content from being covered by navbar */
-}
-
-
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background: linear-gradient(135deg, #a18cd1, #fbc2eb); /* Gradient background */
-    color: white;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    height: 70px; /* Increased height to avoid cropping */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    box-sizing: border-box; /* Ensure padding doesn't affect overall size */
+  background-color: white;
+  padding: 20px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-/* Logo styling */
-.logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .logo-image {
-    width: 50px;
-    height: 50px;
-    object-fit: contain; /* Ensures the image fits nicely */
-    transition: transform 0.3s ease;
-  }
-  
-  .logo-image:hover {
-    transform: scale(1.1); /* Slight zoom on hover */
-  }
-
-/* Navigation links */
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-    margin: 0;
-    padding: 0;
-    height: 100%; /* Ensure the list takes up full height of navbar */
-    align-items: center; /* Vertically center the links */
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nav ul li a {
-    text-decoration: none;
-    color: black; /* Default link color */
-    transition: color 0.3s ease;
-  }
-
-  .active-link {
-    color: blue; /* Change this to your desired active color */
-    font-weight: bold;
-    border-bottom: 2px solid blue; /* Optional underline effect */
-  }
-
-nav ul li a:hover {
-    color: #00aced;
+ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
 }
 
-/* Style when scrolling */
-nav.scrolled {
-    background: linear-gradient(135deg, #a18cd1, #fbc2eb); /* Gradient background stays on scroll */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
 }
 
-/* Ensure content doesn't overlap the navbar */
-body {
-    padding-top: 80px; /* Added padding to prevent overlap with navbar */
+.active-link {
+  color: #f39c12;
+}
+
+.resume-button a {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #f39c12, #ff6f61);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.resume-button a:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(90deg, #ff6f61, #f39c12);
 }

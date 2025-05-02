@@ -20,6 +20,9 @@ function Home() {
     return (
     <div  className="home-wrapper">
         <div className="home-container">
+        <section className="image-section">
+                <img src={homeImage} alt="BekiTech Showcase" className="showcase-image" />
+            </section>
             <section className="hero-section">
             <h1>Welcome to My Portfolio</h1>
     <p>
@@ -27,9 +30,7 @@ function Home() {
     </p>
                 <button class="getstarted" onClick={handleGetStarted} > Get Started</button>
             </section>
-            <section className="image-section">
-                <img src={homeImage} alt="BekiTech Showcase" className="showcase-image" />
-            </section>
+            
         </div>
     
 

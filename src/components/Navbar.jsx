@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/Navbar.css";
-import logopic from "../assets/logo.png";
+import myresume from "../assets/cv.pdf"
+
 
 function Navbar() {
   useEffect(() => {
@@ -23,47 +24,22 @@ function Navbar() {
 
   return (
     <nav>
-      <div className="logo">
-        <img src={logopic} alt="BekiTech Logo" className="logo-image" />
-      </div>
-      <ul>
-        <li>
-          <NavLink 
-            to="/" 
-            className={({ isActive }) => (isActive ? "active-link" : "")}>
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/about" 
-            className={({ isActive }) => (isActive ? "active-link" : "")}>
-            About
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/services" 
-            className={({ isActive }) => (isActive ? "active-link" : "")}>
-            Services
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/portfolio" 
-            className={({ isActive }) => (isActive ? "active-link" : "")}>
-            Portfolio
-          </NavLink>
-        </li>
-        <li>
-          <NavLink 
-            to="/contact" 
-            className={({ isActive }) => (isActive ? "active-link" : "")}>
-            Contact
-          </NavLink>
-        </li>
-      </ul>
-    </nav>
+  <div className="navbar-container">
+    <ul>
+      <li><NavLink to="/" className={({ isActive }) => (isActive ? "active-link" : "")}>Home</NavLink></li>
+      <li><NavLink to="/about" className={({ isActive }) => (isActive ? "active-link" : "")}>About</NavLink></li>
+      <li><NavLink to="/services" className={({ isActive }) => (isActive ? "active-link" : "")}>Services</NavLink></li>
+      <li><NavLink to="/portfolio" className={({ isActive }) => (isActive ? "active-link" : "")}>Portfolio</NavLink></li>
+      <li><NavLink to="/contact" className={({ isActive }) => (isActive ? "active-link" : "")}>Contact</NavLink></li>
+    </ul>
+
+    <div className="resume-button">
+  <a href={myresume} target="_blank" rel="noopener noreferrer">Resume</a>
+</div>
+
+  </div>
+</nav>
+
   );
 }
 
