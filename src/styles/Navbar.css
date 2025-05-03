@@ -33,19 +33,26 @@ ul li a {
   color: #f39c12;
 }
 
+
+
 .resume-button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 1; /* Allow it to push right */
+  min-width: max-content;
   margin-left: auto;
 }
 
 .resume-button a {
- 
+  padding: 10px 20px;
   background: linear-gradient(90deg, #f39c12, #ff6f61);
   color: white;
   text-decoration: none;
   border-radius: 25px;
   font-weight: 600;
   transition: background 0.3s ease, transform 0.2s;
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap;
 }
 
 .resume-button a:hover {
@@ -53,10 +60,10 @@ ul li a {
   background: linear-gradient(90deg, #ff6f61, #f39c12);
 }
 
-/* ✅ Keep horizontal layout on mobile but adapt spacing */
 @media (max-width: 768px) {
   .navbar-container {
-    padding: 0;
+    flex-wrap: wrap;
+    gap: 10px;
   }
 
   ul {
@@ -65,7 +72,8 @@ ul li a {
   }
 
   .resume-button {
-    margin-left: auto;
+    justify-content: center;
+    width: 100%; /* Force full width to center */
   }
 
   .resume-button a {
