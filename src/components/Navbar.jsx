@@ -23,56 +23,20 @@ function Navbar() {
   return (
     <nav>
       <div className="navbar-container">
-        <ul>
-          <li>
-            <NavLink
-              to="/"
-              className={({ isActive }) => (isActive ? "active-link" : "")}
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              className={({ isActive }) => (isActive ? "active-link" : "")}
-            >
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/services"
-              className={({ isActive }) => (isActive ? "active-link" : "")}
-            >
-              Services
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/portfolio"
-              className={({ isActive }) => (isActive ? "active-link" : "")}
-            >
-              Portfolio
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/contact"
-              className={({ isActive }) => (isActive ? "active-link" : "")}
-            >
-              Contact
-            </NavLink>
-          </li>
-        </ul>
+  <div className="nav-links">
+    <ul>
+      <li><NavLink to="/" className={({ isActive }) => isActive ? "active-link" : ""}>Home</NavLink></li>
+      <li><NavLink to="/about" className={({ isActive }) => isActive ? "active-link" : ""}>About</NavLink></li>
+      <li><NavLink to="/services" className={({ isActive }) => isActive ? "active-link" : ""}>Services</NavLink></li>
+      <li><NavLink to="/portfolio" className={({ isActive }) => isActive ? "active-link" : ""}>Portfolio</NavLink></li>
+      <li><NavLink to="/contact" className={({ isActive }) => isActive ? "active-link" : ""}>Contact</NavLink></li>
+    </ul>
+  </div>
+  <div className="resume-button">
+    <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
+  </div>
+</div>
 
-        <div className="resume-button">
-          {/* Link to the resume in the public folder */}
-          <a href="/cv.pdf" target="_blank" rel="noopener noreferrer">
-            Resume
-          </a>
-        </div>
-      </div>
     </nav>
   );
 }

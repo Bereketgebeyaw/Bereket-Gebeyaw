@@ -11,6 +11,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap; /* Allow wrapping on small screens */
+  
 }
 
 ul {
@@ -37,7 +38,7 @@ ul li a {
 }
 
 .resume-button a {
-  padding: 10px 20px;
+ 
   background: linear-gradient(90deg, #f39c12, #ff6f61);
   color: white;
   text-decoration: none;
@@ -68,7 +69,8 @@ ul li a {
   }
 
   .resume-button a {
-    padding: 8px 16px;
+    padding: 6px 3px;
     font-size: 14px;
+    justify-content: end;
   }
 }
